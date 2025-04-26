@@ -1,0 +1,181 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(100, 104, 104);
+}
+
+.nav-bar {
+   background-color: #9daaab;
+    padding: 1em;
+    /* 1em:16px */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index:3;
+    /* verticall align */
+}
+
+.logo {
+    color: aliceblue;
+    /* font-size: 24px;
+    font-weight: bold;  ye is liye commnet kia qk jb navbar bnaya tha tu text tha logo "my logo" lkn ab image ha tu hum text ki properties nhin daly gy */
+    margin-right: 20px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    
+}
+
+.nav-links li {
+    margin-right: 25px;
+
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-links a:hover  { 
+    color: rgb(48, 83, 133);
+    font-size: 19px;
+    border-bottom: 2px rgb(48, 83, 133)solid;
+}
+/* puedo element me du :: lgty ,pusedo class me ek : lgta ha  */
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    color: aliceblue;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+header{
+    /* background-position: center;  background-size:cover background-repeat:no-repeat */
+    background: url('./background.png') ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+    padding: 20px 20px;
+    color:white;
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* vertically center */
+    align-items: center;     /* horizontally center */
+   
+    
+}
+header h1 p{
+position: relative;
+
+/* z-index use huta ha kisi bhi lement ku ehmiyat deny k liye  */
+z-index: 1;
+}
+
+section{
+padding: 60px 20px;
+max-width: 1000px;
+margin: auto;
+}
+section h2{
+    margin-bottom: 20px;
+    color: #0f5c85;
+}
+section button{
+    background-color: #0f5c85;
+    color:white;
+    border-style: none;
+}
+#about button{
+    border-radius: 4px;
+    padding: 10px 20px;
+    margin-top: 20px;
+}
+.services{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    color: white;
+}
+.card{
+    background-color:#9daaab;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow:1px 2px 3px;
+}
+.card:hover{
+    cursor: pointer;
+    background-color:aliceblue ;
+    color: #676460;
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.contact-form input{
+    padding: 10px;
+    border: 1px solid rgb(154, 146, 146);
+    border-radius: 5px;
+}
+.contact-form textarea{
+    padding: 10px;
+    text-align: start;
+    border: 1px solid rgb(154, 146, 146);
+    border-radius: 5px;
+    text-indent: 0px;
+}
+.contact-form button{
+    padding: 15px 20px;
+    border: 1px solid rgb(154, 146, 146);
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: medium;
+
+}
+footer{
+background-color: black;
+padding: 1em;
+text-align: center;
+color: white;
+}
+
+@media (max-width:768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: rgb(100, 104, 104);
+        width: 100%;
+        padding: 20px;
+    }
+
+    #menu-toggle:checked +.menu-icon +.nav-links {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin-bottom: 10px;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
